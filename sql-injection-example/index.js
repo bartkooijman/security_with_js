@@ -19,7 +19,7 @@ app.post('/login', (req, res) => {
   const password = req.body.password;
 
   const query = `SELECT * FROM users WHERE username='${username}' AND password='${password}'`;
-
+  console.log(query);
   db.get(query, (error, row) => {
     if (error) throw error;
 
